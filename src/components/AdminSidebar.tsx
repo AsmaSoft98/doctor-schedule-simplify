@@ -6,7 +6,7 @@ import {
   CalendarClock, 
   Users, 
   UserCog, 
-  Settings, the
+  Settings,
   FileText, 
   BarChart
 } from 'lucide-react';
