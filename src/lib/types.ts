@@ -25,3 +25,24 @@ export interface AppointmentFormData {
   insurance: string;
   isNewPatient: boolean;
 }
+
+export interface AppointmentStatistics {
+  total: number;
+  upcoming: number;
+  completed: number;
+  canceled: number;
+  bySpecialty: {
+    name: string;
+    count: number;
+  }[];
+}
+
+export interface PatientStatistics {
+  total: number;
+  new: number;
+  returning: number;
+  byAge: {
+    range: string;
+    count: number;
+  }[];
+}

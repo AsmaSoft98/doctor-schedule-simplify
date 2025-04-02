@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, CalendarClock, User } from 'lucide-react';
+import { Menu, X, CalendarClock, User, LayoutDashboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
@@ -28,6 +28,9 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           </Link>
           <Link to="/appointments" className="text-foreground/80 hover:text-primary transition-colors">
             My Appointments
+          </Link>
+          <Link to="/control-panel" className="text-foreground/80 hover:text-primary transition-colors">
+            Control Panel
           </Link>
           <Link to="/about" className="text-foreground/80 hover:text-primary transition-colors">
             About Us
@@ -67,6 +70,14 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                 onClick={() => setIsOpen(false)}
               >
                 My Appointments
+              </Link>
+              <Link 
+                to="/control-panel" 
+                className="text-foreground hover:text-primary transition-colors text-lg"
+                onClick={() => setIsOpen(false)}
+              >
+                <LayoutDashboard className="inline-block mr-2 h-4 w-4" />
+                Control Panel
               </Link>
               <Link 
                 to="/about" 
