@@ -87,3 +87,13 @@ export interface RegisterFormData {
   dateOfBirth: string;
   phone: string;
 }
+
+// API configuration
+export const API_BASE_URL = 'https://your-api-domain.com/api';
+
+// API response interfaces
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+}
