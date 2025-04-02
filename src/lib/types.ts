@@ -46,3 +46,44 @@ export interface PatientStatistics {
     count: number;
   }[];
 }
+
+export interface User {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  role: 'patient' | 'doctor' | 'admin';
+  dateOfBirth?: string;
+  phone?: string;
+  address?: string;
+  profileImage?: string;
+}
+
+export interface Appointment {
+  id: string;
+  patientId: string;
+  patientName: string;
+  patientEmail: string;
+  patientPhone: string;
+  date: string;
+  time: string;
+  reason: string;
+  status: 'pending' | 'approved' | 'rejected' | 'completed' | 'canceled';
+  notes?: string;
+  createdAt: string;
+}
+
+export interface LoginFormData {
+  email: string;
+  password: string;
+}
+
+export interface RegisterFormData {
+  email: string;
+  password: string;
+  confirmPassword: string;
+  firstName: string;
+  lastName: string;
+  dateOfBirth: string;
+  phone: string;
+}
